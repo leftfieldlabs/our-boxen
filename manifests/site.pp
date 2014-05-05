@@ -53,10 +53,19 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
-  include dnsmasq
   include git
-  include hub
-  include nginx
+  include sublime_text_2
+  include chrome
+  include vmware_fusion
+  
+  include osx::recovery_message { 'If this Mac is found, please call 424.500.2045': }
+  include osx::global::expand_save_dialog
+  include osx::global::disable_remote_control_ir_receiver
+  include osx::finder::empty_trash_securely
+  include osx::disable_app_quarantine
+  include osx::no_network_dsstores
+  include osx::software_update
+  
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
